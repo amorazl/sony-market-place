@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.gray{
+    background-color: #E8E8E8;
+}
+.letter{
+    letter-spacing: 5px;
+}
+.lettersmall{
+    letter-spacing: 2px;
+}
+.p{
+    line-height:10px;
+}
+.maps{
+    border-radius: 10%;
+}
+.contact{
+    position: absolute;
+    z-index: -1;
+}
+.contactus{
+    margin-bottom: 20px;
+}
+
+/* NAVBAR */
+body{
+    min-height: 100vh;
+}
+
+#image-sony{
+    width: 160px;
+    margin-top: -30px;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #000000;
+    border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: #000000;
+    color: #FFFFFF
+}
+
+/* IMAGE */
+.image {
+    width: 230px;
+    position: relative;
+    border-radius: 10%;
+    height: auto;
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
+}
+.image__img {
+    display: block;
+}
+.image__overlay {
+    position: absolute;
+    border-radius: 10%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.image__overlay--blur {
+    backdrop-filter: blur(100px);
+}
+.image__overlay--primary {
+    background: #909090bb;
+}
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+.image__overlay:hover {
+    opacity: 1;
+}
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+.image__title {
+    color: yellow;
+    font-size: 1.3em;
+}
+.image__description {
+    font-size: 0.9em;
+    margin-top: 0.25em;
+    text-align: center;
+    padding: 15px;
+}
+
+.col-a{
+    /* background-color: yellow; */
+    margin-left: 75px;
+}
+/* ICON SOSMED */
+.social-links{
+    font-size: 30px;
+    padding-bottom: 25px;
+}
+.social-links i{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    line-height: 80px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+.social-links i::after{
+    z-index: -10;
+    content: '';
+    width: 80px;
+    height: 80px;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(-45deg, #cf128a, #f1f43c);
+    position: absolute;
+    transition: 0.5s;
+}
+.social-links i:hover::after{
+    top: 0;
+}
+.social-links i:hover{
+    color: #ffffff;
+    transform: translateY(-10px);
+}
+
+footer{
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient( to right ,#060016, #16002d);
+    color: #fff;
+    padding: 70px 0 30px;
+    border-top-left-radius: 130px;
+    font-size: 15px;
+    line-height: 20px;
+}
+.foot{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.ter{
+    flex-basis: 25%;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.logo{
+    width: 180px;
+    margin-bottom: 30px;
+}
+.ter h2{
+    margin-left: 50px;
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+    letter-spacing: 3px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.web{
+    width: fit-content;
+    margin: 20px 0;
+}
+ul li{
+    list-style: none;
+    margin-left: 90px;
+    margin-bottom: 12px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.sosmed a i{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.cp{
+    border-top: 2px solid gray;
+    text-align: center;
+}
